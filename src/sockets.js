@@ -10,7 +10,12 @@ export default (io) => {
     socket.on("client:newNote", async (data) => {
       const newNote = await Note(data);
       const savedNote = await newNote.save();
-      socket.emit("server:newNote", savedNote);
+      io.emit("server:newNote", savedNote);
+    });
+
+    socket.on("client:deleteNote", async (id) => {
+      await Note.findByIdAndDelete(id);
+      emitNotes();
     });
   });
 };

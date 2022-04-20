@@ -1,4 +1,4 @@
-import { loadNotes, onNewNote } from "./sockets.js";
+import { loadNotes, onNewNote } from "./socket.js";
 import { onHandleSubmit, renderNotes, appendNote } from "./ui.js";
 
 onNewNote(appendNote);
