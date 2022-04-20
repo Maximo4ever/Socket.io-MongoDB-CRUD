@@ -1,5 +1,6 @@
-import { loadNotes } from "./sockets.js";
-import { onHandleSubmit } from "./ui.js";
+import { loadNotes, onNewNote } from "./sockets.js";
+import { onHandleSubmit, renderNotes, appendNote } from "./ui.js";
 
-loadNotes();
+onNewNote(appendNote);
+loadNotes(renderNotes);
 noteForm.addEventListener("submit", onHandleSubmit);
