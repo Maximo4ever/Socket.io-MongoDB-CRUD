@@ -13,6 +13,14 @@
     />
   </head>
   <body>
-    <h1>App</h1>
+    <h1>App Sockets CRUD</h1>
+    <form id="noteForm">
+      <input id="title" type="text" />
+      <textarea id="description" rows="3"></textarea>
+      <button>Send</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>
