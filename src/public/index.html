@@ -13,13 +13,30 @@
     />
   </head>
   <body>
-    <h1>App Sockets CRUD</h1>
-    <form id="noteForm">
-      <input id="title" type="text" />
-      <textarea id="description" rows="3"></textarea>
-      <button>Send</button>
-    </form>
-    <ul id="notes"></ul>
+    <div class="container h-100 mt-5 mb-2">
+      <div class="row h-100">
+        <div class="col-lg-4 mb-3">
+          <h1>App Sockets CRUD</h1>
+          <form id="noteForm">
+            <input
+              class="form-control mt-3 rounded-0"
+              id="title"
+              type="text"
+              placeholder="Write a title"
+              autofocus
+            />
+            <textarea
+              class="form-control mt-3 rounded-0"
+              id="description"
+              rows="3"
+              placeholder="Write a description"
+            ></textarea>
+            <button class="btn btn-success mt-3">Send</button>
+          </form>
+        </div>
+        <div class="col-lg-8 mt-2" id="notes"></div>
+      </div>
+    </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="./main.js" type="module"></script>

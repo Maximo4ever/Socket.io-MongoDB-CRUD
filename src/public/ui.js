@@ -10,14 +10,14 @@ const noteUI = (note) => {
   div.innerHTML =
     //html
     `
-    <div class="note">
-      <h1>${note.title}</h1>
-      <div>
-        <button class="btn btn-danger" data-id="${note._id}">Delete</button>
-        <button class="btn btn-primary" data-id="${note._id}">Update</button>
-      </div>
-      <p>${note.description}</p>
+  <div class="card card-body rounded-0 note">
+    <h3>${note.title}</h3>
+    <p>${note.description}</p>
+    <div>
+      <button class="btn-sm btn-danger" data-id="${note._id}">Delete</button>
+      <button class="btn-sm btn-primary" data-id="${note._id}">Update</button>
     </div>
+  </div>
   `;
   const btnDelete = div.querySelector(".note .btn-danger");
   btnDelete.addEventListener("click", () => deleteNote(btnDelete.dataset.id));
